@@ -1,0 +1,20 @@
+{
+  "name": "test-plan-creator",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tracy Davies",
+  "license": "",
+  "dependencies": {
+    "blessed": "0.0.37",
+    "express": "^4.8.4",
+    "lodash": "^2.4.1",
+    "q-io": "^1.11.5",
+    "sails-mongo": "^0.10.5",
+    "waterline": "^0.10.14",
+    "waterline-criteria": "^0.11.1"
+  }
+}
