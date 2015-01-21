@@ -34,7 +34,7 @@ module.exports.routes = {
 
   '/': {
     view: 'homepage'
-  }
+  },
 
   /***************************************************************************
   *                                                                          *
@@ -46,4 +46,9 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
+  // Custom CRUD Rest Routes
+
+      //Routes for testcase
+    'get /testcase/:name?': 'TestcaseController.find',
+    'post /testcase': 'TestcaseController.create'
 };
