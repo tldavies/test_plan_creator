@@ -49,6 +49,8 @@ module.exports.routes = {
   // Custom CRUD Rest Routes
 
       //Routes for testcase
-    'get /testcase/:name?': 'TestcaseController.find',
+    'get /testcase' : 'TestcaseController.findAll',
+    'get /testcase/:name?': 'TestcaseController.findbyname',
     'post /testcase': 'TestcaseController.create'
+
 };

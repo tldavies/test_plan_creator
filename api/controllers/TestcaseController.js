@@ -25,11 +25,13 @@ module.exports = {
 
     //Find action - finds the testcase ID from the testcase name. If it cant
     //find the testcase then creates a new one.
-    find: function(req, res, next) {
-        var name = req.params('name');
+    findbyname: function(req, res, next) {
+      //  console.log("req = " + req);
 
-        Testcase.findOneByName(name)
-            .done( function createIfNotFoundTestcase (err, test) {
+        var name = req.param('name');
+
+        Testcase.findByName(name)
+            .exec( function createIfNotFoundTestcase (err, test) {
                 if (err) {
                     // We set an error header here,
                     // which we access in the views an display in the alert call.
@@ -41,12 +43,20 @@ module.exports = {
                     res.json(test);
                 } else {
                     //Create a new TestCase with the name
-                    create(req, res, next);
+                    this.create(req, res, next);
                 }
             });
+   },
+
+    findAll: function (req, res) {
+        Testcase.find().exec(function (err, testcases) {
+            if (err) {
+                res.send(400);
+            } else {
+                res.send(testcases);
+            }
+        });
     }
-
-
 
 
 
