@@ -50,7 +50,8 @@ module.exports.routes = {
 
       //Routes for testcase
     'get /testcase' : 'TestcaseController.findAll',
-    'get /testcase/:name?': 'TestcaseController.findbyname',
-    'post /testcase': 'TestcaseController.create'
+    'put /testcase/:name?': 'TestcaseController.findbyname',
+    'post /testcase': 'TestcaseController.create',
+    'get /testcase/name:/testcasestatus' : 'TestcaseController.getstatusesbyid'
 
 };

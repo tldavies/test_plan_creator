@@ -8,6 +8,7 @@
 module.exports = {
     attributes: {
         status: 'string',
+        reportID: 'integer',
         owner: {
             model: 'testcase'
         }

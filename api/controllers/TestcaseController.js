@@ -56,6 +56,10 @@ module.exports = {
                 res.send(testcases);
             }
         });
+    },
+
+    getstatusesbyid: function (req, res) {
+        var id = req.parm();
     }
 
 
